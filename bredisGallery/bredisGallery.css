@@ -1,0 +1,205 @@
+@import 'https://fonts.googleapis.com/css?family=Quicksand';
+#galeryMain{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: fixed;
+    z-index:1000000 ;
+    overflow:hidden;
+    text-align: center;
+    display: none;
+}
+#galeryMain img{
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    right:0;
+    left:0;
+    bottom:0;
+    top:0;
+    margin: auto;
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#closebutton{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top:0;
+    background: rgba(0, 0, 0, 0.15);
+    background-image: url(img/close2.svg);
+    background-size: 11px 11px;
+    cursor: pointer;
+    z-index:1100000;
+    border-radius: 50%;
+    border: 2px solid #a6eb20;
+    background-repeat:no-repeat;
+    background-position:center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#backbutton{
+    background: rgba(0, 0, 0, 0.15);
+    width:25px;
+    height:25px;
+    position: absolute;
+    left: 0;
+    background-image: url(img/back2.svg);
+    background-size: 20px 20px;
+    background-repeat:no-repeat;
+    background-position:center;
+    cursor: pointer;
+    z-index:1100000;
+    overflow: hidden;
+    display: none;
+    border-radius: 50%;
+    border: 2px solid #a6eb20;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#nextbutton{
+    background: rgba(0, 0, 0, 0.15);
+    width:25px;
+    height:25px;
+    position: absolute;
+    right: 0;
+    background-image: url(img/next2.svg);
+    background-size: 20px 20px;
+    background-repeat:no-repeat;
+    background-position:center;
+    cursor: pointer;
+    z-index:1100000;
+    overflow: hidden;
+    display: none;
+    border-radius: 50%;
+    border: 2px solid #a6eb20;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+}
+
+#wrappernav{
+    width:160px;
+    height: 29px;
+    position: fixed;
+    left:50%;
+    margin-left: -80px;
+    z-index:1100000;
+    bottom:5px;
+    display: none;
+    padding: 0;
+    text-align: center;
+    background: #43B6E5;
+    border-radius: 30px;
+}
+
+#glassDiv{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    z-index: 1000001;
+    display: none;
+    cursor: grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    left: 0;
+    top:0;
+    bottom:0;
+    right:0;
+    margin:auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+#bredisGallery{
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 1000001;
+    display: none;
+}
+
+#download{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.15);
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    background-image: url(img/download2.svg);
+    background-size: 20px 20px;
+    background-repeat:no-repeat;
+    background-position:center;
+    cursor: pointer;
+    z-index:1100000;
+    border: 2px solid #a6eb20;
+    top: 0;
+    bottom:0;
+    margin: auto;
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    
+}
+
+#countImg{
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    margin: auto;
+    line-height: 30px;
+    font-size:19px;
+    font-family: 'Quicksand', sans-serif;
+    cursor:default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+ }
+#wrappernavTop{
+    height:160px;
+    width: 29px;
+    position: fixed;
+    z-index:1100000;
+    bottom:5px;
+    display: none;
+    padding: 0;
+    background: #43B6E5;
+    border-radius: 30px;
+    right:5px;
+    top:5px;
+}
+#fullScreenB{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.15);
+    width:25px;
+    height:25px;
+    border-radius: 50%;
+    background-image: url(img/fullscreen2.svg);
+    background-size: 15px 15px;
+    background-repeat:no-repeat;
+    background-position:center;
+    cursor: pointer;
+    z-index:1100000;
+    border: 2px solid #a6eb20;
+    bottom:0;
+    margin: 0;
+    display: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}

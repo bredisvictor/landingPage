@@ -1,0 +1,68 @@
+							//bredisGlllery VERY EASY FOR USE//
+							 //RESPONSIVE FOR EVERY DEVICES//
+INSTALLATION INSTRUCTION
+
+
+
+
+1.Insert 'bredisGallery' folder to your main site folder.
+
+
+2.Add script tag to your html after jQuery CDN and before your main js file:
+
+                                       <script src="bredisGallery/bredisGallery.js"></script>
+
+
+Style tag you have to add to head of your HTML:
+
+				       <link href="bredisGallery/bredisGallery.css" rel="stylesheet">
+
+
+3. You have to cover your images with some container, you can chose every ID or CLASS NAME that you want.
+
+				                	///First cover example///
+
+						<div id="yourIdName">
+                  				      <img src="img/1.1.jpg" alt="">
+             	   				      <img src="img/1.2.jpg" alt="">
+               					      <img src="img/1.3.jpg" alt="">
+               					      <img src="img/1.4.jpg" alt="">
+              					      <img src="img/1.5.jpg" alt="">
+                				      <img src="img/1.6.jpg" alt="">
+              					</div>
+
+Also you can cover every image by some tag 
+
+							///Second cover example///
+						
+						<div id="yourIdName">
+						      <span>
+                  				      	    <img src="img/1.1.jpg" alt="">
+						      </span>
+						      <span>
+             	   				     	    <img src="img/1.2.jpg" alt="">
+						      </span>
+						      <span>
+               					            <img src="img/1.3.jpg" alt="">
+						      </span>
+						      <span>
+               					    	     <img src="img/1.4.jpg" alt="">
+						      </span>
+						      <span>
+              					   	    <img src="img/1.5.jpg" alt="">
+						      </span>
+						      <span>
+                				      	    <img src="img/1.6.jpg" alt="">
+						      <span>
+              					</div>
+
+
+4.You have activate 'bredisGallery' by adding start line to your main javascript file and enter images destination.
+						
+							///First cover example///
+
+						bredisGallery.start("#yourIdName");
+
+							///Second cover example///
+
+                                                bredisGallery.start("#yourIdName>span");

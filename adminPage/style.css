@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700|Marvel:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700');
+*{
+    margin: 0;
+    padding:0;
+    font-family: 'Montserrat',sans-serif;
+}
+html,body,mainCover{
+    width:100%;
+    height: 100%;
+    background: #eeeeee;
+    
+}
+#mainListCover{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.cpLogo,.cpLogoo{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    color:#fff;
+    font-size:13px;
+    background: linear-gradient(to top right, rgb(17, 129, 190), rgba(101, 172, 211, 0.47));
+}
+.cpLogoo{
+    margin: 0 auto;
+    background: none;
+    font-size: 20px
+}
+header{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    height: 70px;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 20px;
+    background: linear-gradient(to top right, rgb(17, 129, 190), rgba(101, 172, 211, 0.47));
+}
+#logot{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/drone.svg);
+    float: left;
+    background-size: cover;
+    margin-right: 15px;
+    margin-top: -5px;
+    
+}
+header>h1{
+    float: left;
+    color: #fff;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 25px;
+}
+header>h1>span{
+    color: rgba(255, 255, 255, 0.49);
+font-size: 30px;
+font-family: 'Marvel';
+}
+.search{
+    float: right;
+    width: 500px;
+    height: 30px;
+    margin-top: -30px;
+}
+#freeSearch{
+    width: 250px;
+    float: right;
+    height: 100%;
+    border: 2px solid #e2e2e2;
+    position: relative;
+}
+#freeSearch>input{
+    width: 210px;
+    height: 100%;
+    border: 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+    color:#888;
+}
+#freeSearch>span{
+    display: block;
+    float: right;
+    height: 100%;
+    width: 40px;
+    position: absolute;
+    top:-2px;
+    right:-2px;
+    height: 34px;
+    background: #43B6E5;
+    background-image: url(../img/search.svg);
+    background-size: 25px 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#newCustumers,#regularCustomers{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    background: #fff;
+    box-shadow:1px 1px 6px 0px rgba(167, 167, 167, 0.75);
+    padding-bottom: 20px
+}
+.nCustumersHeader{
+    height: 70px;
+    border-bottom: 2px solid #e2e2e2;
+    box-sizing: border-box;
+    padding: 20px;
+}
+.search>select{
+    height: 34px;
+    border: 2px solid #e2e2e2;
+    color:#888;
+    width: 150px;
+    font-size: 13px;
+    outline: none;
+}
+
+.search>span{
+    color:#888;
+    margin-right: 10px;
+    font-size: 13px;
+}
+#newCustumers table{
+    color:#888;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 30px auto;
+    font-size: 14px;
+}
+
+#newCustumers table tr{
+    text-align: center;
+    height: 40px;
+}
+#newCustumers table tr td:first-child{
+    width: 50px;
+    
+}
+#newCustumers table tr td{
+    width: 180px;
+}
+#newCustumers table tr:nth-child(even){
+    background: #EEEEED;
+}
+#newCustumers table tr:first-child{
+    background: #43B6E5;
+    color:#fff;
+    font-size: 16px;
+}
+
+.addNew, .deleteCustomer, .mediumButton,.lowButton,.mediumButtonC,.lowButtonC,.Low,.Medium,#noteButton{
+    width: 70px;
+    border: 0;
+    height: 25px;
+    border-radius: 5px;
+    color:#fff;
+    cursor: pointer;
+}
+.addNew,#noteButton{
+    background: linear-gradient(to top right , rgb(17, 129, 190), rgba(101, 172, 211, 0.77));
+}
+.deleteCustomer,.Medium{
+    background: linear-gradient(to top right , #eb1116, rgba(235, 17, 22, 0.46));
+}
+
+.mediumButton{
+    background: #b2b2b2;
+    
+}
+.lowButton,.lowButtonC,.Low{
+    background: linear-gradient(to top right , #93b74f, rgba(166, 235, 32, 0.57));
+}
+.lowButtonC{
+    box-shadow: none;
+}
+#newCustumers table tr td:nth-child(7){
+    width: 35px !important;
+    /*background: url(../img/plus.svg);
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;*/
+}
+
+.disabled{
+    display: block;
+    width:20px;
+    height:20px;
+    background: url(../img/plus.svg);
+    background-size: 20px 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#newCustumers table tr:first-child td:nth-child(7){
+    background: url(../img/pen.svg);
+    background-size: 25px 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#regularCustomers table{
+    color:#888;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 30px auto;
+    font-size: 14px;
+}
+
+#regularCustomers table tr{
+    text-align: center;
+    height: 40px;
+}
+#regularCustomers table tr td:first-child{
+    width: 50px;
+    
+}
+#regularCustomers table tr td{
+    width: 180px;
+}
+#regularCustomers table tr:nth-child(even){
+    background: #EEEEED;
+}
+#regularCustomers table tr:first-child{
+    background: #43B6E5;
+    color:#fff;
+    font-size: 16px;
+}
+
+#regularCustomers table tr td:nth-child(8){
+    width: 35px !important;
+    
+}
+#regularCustomers table tr td:nth-child(7){
+    width: 155px !important;
+    
+}
+#regularCustomers table tr td:nth-child(9){
+    width: 155px !important;
+    
+}
+#regularCustomers table tr td:nth-child(6){
+    width: 35px !important;
+    
+}
+
+#regularCustomers table tr:first-child td:nth-child(8){
+    background: url(../img/pen.svg);
+    background-size: 25px 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.mediumButtonC,.Medium{
+    background: linear-gradient(to top right , #eb1116, rgba(235, 17, 22, 0.46));
+}
+.Low,.Medium{
+    cursor: default !important;
+}
+#noteMainCover{
+    position: fixed;
+    z-index: 3;
+    background: rgba(255, 255, 255, 0.66);
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: none;
+}
+#commentCover{
+    position: absolute;
+    width: 350px;
+    height: 200px;
+    background: #fff;
+    box-shadow: 1px 1px 6px 0px rgba(167, 167, 167, 0.75);
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin: auto;
+    color: #888;
+}
+#commentHead{
+    height: 50px;
+    border-bottom: 2px solid #e2e2e2;
+    position: relative;
+    
+}
+#commentHead>span{
+    width: 100%;
+    height: 100%;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15px;
+}
+#cloesNote{
+    position: absolute;
+    z-index: 2;
+    height: 20px;
+    width: 20px;
+    background: #8A9399;
+    background-image: url(img/close.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: center;
+    right:5px;
+    top:5px;
+    cursor: pointer;
+}
+#commentBody{
+    width: 100%;
+    height: 150px;
+}
+#commentBody>textarea{
+    width: 100%;
+    color:#888;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100px;
+    border:0;
+    resize: none;
+    border-bottom: 2px solid #e2e2e2;
+    font-size: 14px;
+}
+#noteButton{
+    width: 100px;
+    height: 30px;
+    float: right;
+    margin-right:15px;
+    margin-top:9px
+}
+.endabled,.endabledwww{
+    background-image: url(img/ok.svg) !important;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    display: block;
+    margin: 0 auto;
+}
+.endabledwww{
+    background-image: url(img/exclamation-button.svg) !important;
+    cursor: pointer;
+}
+.disabledwww{
+    display: none;
+}
+
+#textAreaC:disabled{
+    background:#f2f2f2;
+}
+#downloadCSV{
+    width: 150px;
+    height: 30px;
+    float: left;
+    font-size: 11px;
+    position: absolute;
+    top:0;
+    right:0;
+    text-align: center;
+    line-height: 30px;
+    color:#fff;
+    background: linear-gradient(to top right, rgb(17, 129, 190), rgba(101, 172, 211, 0.47));
+    border-radius: 5px;
+    cursor: pointer;
+    border: 0;
+    outline: none;
+	
+}
+#downloadCSV>span{
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top:5px;
+    left:5px;
+    background: url(img/download-file.svg);
+    background-size: cover;
+}
+
+#leftSideReg{
+    width: 500px;
+    height: 100%;
+    position: relative;
+}
+.progress{
+    background: url(img/progress.svg);
+    background-size: cover;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.finish{
+    background: url(img/ok.svg);
+    background-size: cover;
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+}

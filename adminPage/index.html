@@ -1,0 +1,129 @@
+<!doctype html>
+<html ng-app="landingPage">
+<head>
+    <meta charset="UTF-8">
+    <title>Control Panel</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/main.js"></script>
+    
+</head>
+<body ng-controller="customersController">
+    <div id="mainCover">
+        <div id="mainListCover">
+            <header>
+               <span id="logot"></span>
+                <h1>Proto<span>Copter</span></h1>
+                <div class="cpLogoo">CONTROL PANEL</div> 
+                   
+            </header>
+            <section id="newCustumers">
+                <div class="nCustumersHeader">
+                    <div class="cpLogo">NEW CUSTOMERS</div>
+                    <div class="search">
+                        <span>Sort by:</span>
+                        <select ng-model="newSelectedOpt"  ng-options="item.itemName for item in newCustOpt track by item.itemValue">
+                        </select>
+                        <div id="freeSearch">
+                            <input ng-model="freeSearchNew" placeholder="Search" type="text">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <td>#</td>
+                        <td>Full Name</td>
+                        <td>E-mail</td>
+                        <td>Phone</td>
+                        <td>Reg. date</td>
+                        <td>Priority</td>
+                        <td></td>
+                        <td>Add/Delete</td>
+                    </tr>
+                    <tr ng-repeat="customer in customers | orderBy:newSelectedOpt.itemValue | filter:freeSearchNew">
+                        <td>{{$index+1}}</td>
+                        <td>{{customer.fullname}}</td>
+                        <td>{{customer.email}}</td>
+                        <td>{{customer.phone}}</td>
+                        <td>{{customer.regDate}}</td>
+                        <td>
+                            <button ng-click="makeMedium(customer.id)" onclick="mediumPriority(this)" class="mediumButton">Medium</button>
+                            <button ng-click="makeLow(customer.id)" onclick="lowPriority(this)" class="lowButton">Low</button>
+                        </td>
+                        <td><span ng-click="addNoteIndex(customer.id)" onclick="openNote()" ng-class="customer.commentStatus"></span></td>
+                        <td>
+                            <button ng-click="addToRegular(customer.id)" class="addNew"><span></span>Add</button>
+                            <button ng-click="deleteCUstomerFromNew(customer.id)" class="deleteCustomer">Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <section id="regularCustomers">
+                <div class="nCustumersHeader">
+                    <div id="leftSideReg">
+                        <div class="cpLogo">REGULAR CUSTOMERS</div>
+                        <form action="php/createCSV.php">
+                        <button id="downloadCSV"><span></span>EXPORT TO CSV</button>
+                        </form>
+                    </div>
+                    <div class="search">
+                        <span>Sort by:</span>
+                        <select ng-model="regSelectedOpt"  ng-options="item.itemName for item in regCustOpt track by item.itemValue">
+                        </select>
+                        <div id="freeSearch">
+                            <input ng-model="freeSearchReg" placeholder="Search" type="text">
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <table>
+                    <tr>
+                        <td>#</td>
+                        <td>Full Name</td>
+                        <td>E-mail</td>
+                        <td>Phone</td>
+                        <td>Reg. date</td>
+                        <td>Status</td>
+                        <td>Priority</td>
+                        <td></td>
+                        <td>Delete</td>
+                    </tr>
+                    <tr ng-repeat="customer in regularCustomers | orderBy:regSelectedOpt.itemValue | filter:freeSearchReg">
+                        <td>{{$index+1}}</td>
+                        <td>{{customer.fullname}}</td>
+                        <td>{{customer.email}}</td>
+                        <td>{{customer.phone}}</td>
+                        <td>{{customer.regDate}}</td>
+                        <td><span ng-click="changeStat(customer.id)" ng-class="customer.status"></span></td>
+                        <td>
+                            <button ng-class="customer.priority">{{customer.priority}}</button>
+                        </td>
+                        <td>
+                        <span ng-click="viewNoteIndexReg(customer.comment)" onclick="openNote()" ng-class="customer.commentStatus+www"></span>
+                        </td>
+                        <td>
+                            <button ng-click="deleteCUstomerFromReg(customer.id)" class="deleteCustomer">Delete</button>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </div>
+        <div id="noteMainCover">
+            <div id="commentCover">
+                <div id="commentHead">
+                    <div id="cloesNote"></div>
+                    <span>NOTE</span>
+                </div>
+                <div id="commentBody">
+                    <textarea id="textAreaC" placeholder="Enter the note" ng-model="note"></textarea>
+                    <button ng-show="noteOrComment" ng-click="addNote()" id="noteButton">Add note</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

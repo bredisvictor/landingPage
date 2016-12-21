@@ -1,0 +1,139 @@
+<!doctype html>
+<html ng-app="landingPage">
+<head>
+    <meta charset="UTF-8">
+    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href ="bredisGallery/bredisGallery.css" rel="stylesheet"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+    <script src ="bredisGallery/bredisGallery.js"></script> 
+    <script src="js/main.js"></script>
+    <script src="js/angular.js"></script>
+</head>
+<body>
+    <div id="mainCover">
+        <header>
+            <div id="inner">
+                <span id="logo"></span>
+                <h1>Proto<span>Copter</span></h1>
+                <span id="phoneHeader">077-567-345</span>
+                <span id="phoneLogo"></span>
+            </div>
+        </header>
+        <section id="mainSection">
+            <div id="mainSectionCover">
+                <div id="leftSide">
+                    <div id="headerText">
+                        <h2>Get yourself your own helicopter and use it for personal and commercial needs.</h2>
+                        <span>
+                            For more information contact us by form filling.
+                        </span>
+                    </div>
+                    <div id="picSection">
+                        <div id="backPic">
+                            <div id="headerBackpic">
+                                <h3>Radio Controllers</h3>
+                                <span>The most simple for use</span>
+                            </div>
+                            <div id="imageBackpic"></div>
+                        </div>
+                        <div id="sliderCover">
+                            <div id="headerSlider">
+                                <h3>Popular Models</h3>
+                                <span>Wide choose of many models</span>
+                            </div>
+                            <div id="slider">
+                                <img src="img/dron1.jpg" alt=""><img
+                                src="img/dron2.jpeg" alt=""><img
+                                src="img/dron3.jpg" alt=""><img
+                                src="img/dron4.jpg" alt=""><img
+                                src="img/dron5.png" alt="">
+                            </div>
+                            <span class="zoom"></span>
+                            <span class="zoom"></span>
+                            <span class="zoom"></span>
+                            <span class="zoom"></span>
+                            <span class="zoom"></span>
+                        </div>
+                    </div>
+                </div>
+                <div id="rightSide" ng-controller="form">
+                    <div id="formCover">
+                        <form ng-submit="createCustomer()" name="sendForm" novalidate>
+                            <div class="inputCoverLine">
+                                <label class="labb" id="fnl" for="fullName"><span class="requireField">*</span></label>
+                                <input full-name name="fullName" ng-model="user.name" type="text" id="fullName" placeholder="Full Name" required>
+                                <div class="checkMarks cmfn" ng-show="sendForm.fullName.$valid && sendForm.fullName.$dirty"></div>
+                                <div class="checkMarks cmfnin" ng-show="sendForm.fullName.$invalid && sendForm.fullName.$dirty"></div>
+                                
+                                
+                                
+                                <span class="errorsMessage" ng-show="sendForm.fullName.$invalid && sendForm.fullName.$dirty">{{getError(sendForm.fullName.$error)}}</span>
+                            </div>
+                            <div class="inputCoverLine">
+                                <label class="labb" id="el" for="email"><span class="requireField">*</span></label>
+                                <input my-email name="email" ng-model="user.email" type="text" id="email" placeholder="E-mail" required>
+                                <div class="checkMarks cmfn" ng-show="sendForm.email.$valid && sendForm.email.$dirty"></div>
+                                <div class="checkMarks cmfnin" ng-show="sendForm.email.$invalid && sendForm.email.$dirty"></div>
+                                <span class="errorsMessage" ng-show="sendForm.email.$invalid && sendForm.email.$dirty">{{getError(sendForm.email.$error)}}</span>
+                            </div>
+                            <div class="inputCoverLine">
+                                <label class="labb" id="pl" for="phone"><span class="requireField">*</span></label>
+                                <select ng-model="valNum"  ng-options="item.num for item in phoneFirst track by item.val">
+                                </select>
+                                <input my-phone name="phone" ng-model="user.phone" type="text" id="phone" placeholder="Phone" required>
+                                <div class="checkMarks cmfn" ng-show="sendForm.phone.$valid && sendForm.phone.$dirty"></div>
+                                <div class="checkMarks cmfnin" ng-show="sendForm.phone.$invalid && sendForm.phone.$dirty"></div>
+                                <span class="errorsMessage" ng-show="sendForm.phone.$invalid && sendForm.phone.$dirty">{{getError(sendForm.phone.$error)}}</span>
+                            </div>
+                            
+                            <div class="inputCoverLine">
+                               <input type="checkbox" id="advertising">
+                                <label id="lLeft" for="advertising">I whant receive advertising to my e-mail</label>
+                            </div>
+                            <div class="inputCoverLine">
+                                <input ng-model="user.agreed" type="checkbox" id="agree" required>
+                                <label for="agree"><span class="requireFieldd">*</span> I agree with convention of this company</label>
+                            </div>
+                            <span ng-hide="sendForm.$dirty" id="sent"></span>
+                            <button type="submit" id="send" ng-disabled="sendForm.$invalid || sendForm.fullName.$pristine || sendForm.email.$pristine || sendForm.phone.$pristine ">SEND FORM</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="secondSection">
+            <div id="labelsCover">
+                <div class="three">
+                    <div class="topDiv">
+                        <span class="topPic p"></span>
+                        <span class="topText">Radio Contrellers</span>
+                    </div>
+                    <div class="bottomDiv">
+                        Control your Drone with every device that have a wifi.
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="topDiv">
+                        <span class="topPic v"></span>
+                        <span class="topText">Video Monitoring</span>
+                    </div>
+                    <div class="bottomDiv">
+                        Video surveillance of private and commercial enterprises for security.
+                    </div>
+                </div>
+                <div class="three">
+                    <div class="topDiv">
+                        <span class="topPic s"></span>
+                        <span class="topText">Making Fun</span>
+                    </div>
+                    <div class="bottomDiv">
+                        Fun pastime for all fammily from children to the elderly. 
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
